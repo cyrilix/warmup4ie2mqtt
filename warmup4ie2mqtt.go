@@ -66,7 +66,7 @@ func main() {
 	if err != nil {
 		log.Panicf("unable to connect to warmup server: %v\n", err)
 	}
-	MonitorDevice(device, &publisher, topicBase, 1*time.Second)
+	MonitorDevice(device, &publisher, topicBase, 3*time.Minute)
 }
 
 func setDefaultValueFromEnv(value *string, key string, defaultValue string) {
